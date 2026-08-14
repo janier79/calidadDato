@@ -10,15 +10,6 @@ from dotenv import load_dotenv
 # =====================================================
 # AUTOLANZADOR PARA VS CODE (Permite usar el botón ▶ Play)
 # =====================================================
-if __name__ == "__main__" and "STREAMLIT_RUNNING" not in os.environ:
-    os.environ["STREAMLIT_RUNNING"] = "true"
-    try:
-        subprocess.run(
-            [sys.executable, "-m", "streamlit", "run", os.path.abspath(__file__)]
-        )
-        sys.exit()
-    except Exception:
-        pass
 
 import pandas as pd
 import psycopg2
